@@ -1,0 +1,23 @@
+{
+	"debug": true,
+	"pages": [
+		"page/index/index",
+		"page/mine/mine",
+		"page/order/order",
+		"page/detail/detail"
+	],
+	"window": {
+		"navigationBarBackgroundColor": "#3c3c40",
+		"navigationBarTextStyle": "white",
+		"backgroundColor": "#efefef",
+		"backgroundTextStyle": "dark",
+		"navigationBarTitleText": "DQ(上海七宝嘉茂店)"
+	},
+	
+	"networkTimeout": {
+		"request": 10000,
+		"connectSocket": 10000,
+		"uploadFile": 10000,
+		"downloadFile": 10000
+	}
+}

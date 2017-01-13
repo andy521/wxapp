@@ -1,0 +1,5 @@
+page{height: 100%;font-family: "微软雅黑";background: #f5f5f5}
+.detailtop{height:300rpx;background: #fff;text-align: center}
+.detailtoppic image{width:100rpx;height:100rpx;border-radius:50%;border:3px solid #f38815;margin-top:50rpx;}
+.detailtoptit{font-size: 30rpx;color:#4a4a4a;margin-top:10rpx}
+.detailtopstate{font-size: 36rpx;color:#4a4a4a;font-weight:bold;margin-top:10rpx}
