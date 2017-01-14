@@ -1,4 +1,4 @@
-﻿var server = require('./utils/server');
+var server = require('./utils/server');
 App({
 	onLaunch: function () {
 		console.log('App Launch')
@@ -10,7 +10,7 @@ App({
 		} else {
 			wx.checkSession({
 				success: function () {
-					// 登录态 未过期
+					// 登录态未过期
 					console.log('登录态未过期')
 					self.rd_session = rd_session;
 					self.getUserInfo();

@@ -1,65 +1,87 @@
 <view class="container">
-	<view class="header {{scrollDown?'scrolled':''}}">
-		<view class="location ellipsis" bindtap="toNearby">
-			<image class="icon" src="/imgs/index/icon_location.png"/>
-			{{address}}
-		</view>
-		<view class="search" bindtap="tapSearch">
-			<image class="icon" src="/imgs/index/icon_search.png"/>
-			<i class="fa fa-home"></i>
-			烤鸭
-		</view>
-	</view>
+  <view class="header">
+    <view class="filter left">
+      <navigator url="../index/index" open-type="redirect">产品</navigator>
+    </view>
+    <view class="filter right">
+      <navigator url="../order/order" open-type="redirect">订单</navigator>
+    </view>
+  </view>
 
-	<scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" bindscroll="onScroll">
-		<swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500">
-			<block wx:for="{{banners}}" wx:key="id">
-				<swiper-item>
-					<image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}"/>
-				</swiper-item>
-			</block>
-		</swiper>
+  <!--goodslist start-->
+  <view class="shop">
+    <view class="goods" wx:for="{{goods}}" wx:for-item="i" wx:for-index="id" data-id="{{i.id-1}}" wx:key="id">
+      <view class="goodsbox">
+        <image src="{{goods[id].pic}}" data-id="{{i.id-1}}" bindtap="showGoodsDetail"></image>
+        <view class="title1">￥{{goods[id].price}}</view>
+        <view class="title2">{{goods[id].name}}</view>
+        <view class="title3 addCart" bindtap="tapAddCart" data-id="{{id}}">选择</view>
+      </view>
+    </view>
+    <view class="clear"></view>
+  </view>
 
-		<swiper class="section icons" indicator-dots="true" autoplay="" interval="" duration="500">
-			<swiper-item wx:for="{{icons}}" wx:for-item="list" wx:key="id">
-				<view class="icon" wx:for="{{list}}" wx:for-item="icon" wx:key="id" bindtap="toNearby">
-					<image src="{{icon.img}}"/>
-					<text>{{icon.name}}</text>
-				</view>
-			</swiper-item>
-		</swiper>
+  <!--goodsdetail start-->
+  <view class="goods-detail" hidden="{{!showGoodsDetail}}">
+    <view class="mask" bindtap="hideGoodsDetail"></view>
+    <view class="goodsdetail">
+      <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500">
+        <swiper-item>
+          <image src="/imgs/index/gooddetail.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+          <image src="/imgs/index/gooddetail.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+          <image src="/imgs/index/gooddetail.jpg"></image>
+        </swiper-item>
+      </swiper>
+      <view class="title1">{{goods[id].name}}</view>
+      <view class="title2">法国大使馆的反馈给对方考虑更放得开了给你看</view>
+      <view class="title3">推荐星级：
+        <image src="/imgs/shop/star.jpg"></image>
+        <image src="/imgs/shop/star.jpg"></image>
+      </view>
+      <view class="title4">
+        <view class="title5">¥{{goods[id].price}}</view>
+        <view class="title6" bindtap="tapAddCart" data-id="{{id}}">加入购物车</view>
+      </view>
+    </view>
+  </view>
 
-		<view class="section section-big discount">
-			<view class="title">优惠专区</view>
-			<image class="content" bindtap="toNearby" src="http://wxapp.im20.com.cn/impublic/waimai/imgs/index/dicount.jpg"/>
-		</view>
-
-		<view class="section section-big preferred">
-			<view class="title">为你优选</view>
-			<image class="content" bindtap="toNearby" src="http://wxapp.im20.com.cn/impublic/waimai/imgs/index/preferred.jpg"/>
-		</view>
-
-		<view class="section section-big special">
-			<view class="title">特色频道</view>
-			<image class="content" bindtap="toNearby" src="http://wxapp.im20.com.cn/impublic/waimai/imgs/index/special.jpg"/>
-		</view>
-
-		<view id="nearby" class="section section-big nearby">
-			<view class="title">附近商家</view>
-			<view class="filters">
-				<view class="filter {{filterId==1?'active':''}}" data-id="1" bindtap="tapFilter">综合排序<text class="v">↓</text>
-				</view>
-				<view class="filter {{filterId==2?'active':''}}" data-id="2" bindtap="tapFilter">销量最高<text class="v">↓</text>
-				</view>
-				<view class="filter {{filterId==3?'active':''}}" data-id="3" bindtap="tapFilter">距离最近<text class="v">↓</text>
-				</view>
-			</view>
-			<view class="shop" wx:for="{{shops}}" wx:key="id">
-				<navigator url="/page/shop/shop?id={{item.id}}">
-					<image src="{{item.img}}"/>
-				</navigator>
-			</view>
-		</view>
-		<view class="loading">努力加载中…</view>
-	</scroll-view>
+  <!--goodscart start-->
+  <view class="cart-detail" hidden="{{!showCartDetail||!cart.count}}">
+    <view class="mask" bindtap="hideCartDetail"></view>
+    <view class="list">
+      <view class="carttit">
+        <view class="carttit0">购物车</view>
+        <view class="cartempty"><image src="/imgs/index/del.jpg" class="cartimg"></image>清空</view>
+      </view>
+      <view class="carttxt">
+        <view class="carttxt0">满减</view>
+        <view class="carttxt1">订单满100m免运费\配送费</view>
+      </view>
+      <view class="item" wx:for="{{cart.list}}" wx:for-index="id" wx:for-item="num" wx:key="id">
+        <view class="name ellipsis">{{goods[id].name}}</view>
+        <view class="total">￥{{goods[id].price*cart.list[id]}}</view>
+        <view class="reduce" data-id="{{id}}" bindtap="tapReduceCart">-</view>
+        <view class="num">{{cart.list[id]}}</view>
+        <view class="add" data-id="{{id}}" bindtap="tapAddCart">+</view>
+      </view>
+    </view>
+  </view>
+  <view class="cart">
+    <view class="data" bindtap="showCartDetail">
+      <view class="icon">
+        <image src="/imgs/shop/cart.png"></image>
+        <view class="count">{{cart.count}}</view>
+      </view>
+      <view class="total">￥{{cart.total}}</view>
+    </view>
+    <form bindsubmit="submit" report-submit="true">
+      <button class="{{cart.count?'':'disabled'}}" formType="submit" disabled="{{!cart.count}}" bindtap="pay">
+        结算
+      </button>
+    </form>
+  </view>
 </view>
