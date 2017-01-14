@@ -55,7 +55,7 @@ App({
 				distance: 2.3,
 				sales: 2039,
 				logo: 'http://wxapp.im20.com.cn/impublic/waimai/imgs/shops/logo_3.jpg',
-				name: '粥面故事(东大桥店)',
+				name: '粥故事(东大桥店)',
 				desc: '满25减8；满35减10；满60减15（在线支付专享）'
 			},
 			{
