@@ -6,9 +6,9 @@ page {
 }
 
 
-.address{font-size:30rpx;color:#606060;height:150rpx;background: #fff url(http://24px.cc/public/images/bottom.jpg) repeat-x bottom;background-size:auto 1px}
-.location{width:80%;margin-left:20rpx;padding-left:50rpx;height:150rpx;float:left;background:url(http://24px.cc/public/images/loca.jpg) no-repeat left center;background-size:auto 50rpx}
-.locationL{width:10%;height:150rpx;float:right;background:url(http://24px.cc/public/images/kh.jpg) no-repeat center;background-size:auto 30rpx}
+.address{font-size:30rpx;color:#606060;height:150rpx;background: #fff url(http://www.jibuu.cn/ImgServer/wx/bottom.jpg) repeat-x bottom;background-size:auto 1px}
+.location{width:80%;margin-left:20rpx;padding-left:50rpx;height:150rpx;float:left;background:url(http://www.jibuu.cn/ImgServer/wx/loca.jpg) no-repeat left center;background-size:auto 50rpx}
+.locationL{width:10%;height:150rpx;float:right;background:url(http://www.jibuu.cn/ImgServer/wx/kh.jpg) no-repeat center;background-size:auto 30rpx}
 .lotit{font-size:30rpx;color:#4a4a4a;margin-top:38rpx}
 .lotxt{font-size:24rpx;color:#a4a4a4;margin-top:5rpx}
 

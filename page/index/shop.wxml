@@ -1,0 +1,10 @@
+
+<!--订单头-->
+<view class="detailtop">
+  <view class="detailtoppic">
+    <image src="/imgs/index/good.jpg"></image>
+  </view>
+  <view class="detailtoptit">DQ(上海七宝嘉茂店)
+  </view>
+</view>
+

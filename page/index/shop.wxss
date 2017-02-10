@@ -8,13 +8,11 @@ page {
   height: 360rpx;
   background: #fff;
   text-align: center;
-  background: url(http://www.jibuu.cn/ImgServer/wx/bg.jpg) no-repeat top center;
-  background-size: cover;
 }
 
 .detailtoppic image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 150rpx;
+  height: 150rpx;
   border-radius: 50%;
   border: 3px solid #f38815;
   margin-top: 50rpx;
@@ -26,7 +24,7 @@ page {
   height: 240rpx;
   margin:1% 1%;
 }
-.indexbom-tit{border-left:3px solid #f38815;width:93%;height:30rpx;margin:20rpx auto;font-size:30rpx;color: #424242;line-height:30rpx;text-indent:10px;}
+.indexbom-tit{border-left:3px solid #f38815;width:93%;height:30rpx;margin:20rpx auto;font-size:30rpx;color: #4a4a4a;line-height:30rpx;text-indent:10px;}
 .indextop{width:95%;text-align:left;font-size:24rpx;color:#fff;background:url(/imgs/mjbg.png) repeat-x top left;background-size:20rpx auto;margin:0 auto;padding-top:20rpx;margin-top:60rpx;}
 .indextopSpan{display:inline-block;text-align:center;width:40rpx;height:40rpx;border-radius:5px;background:#3ba2f9; font-size:24rpx;color:#fff;line-height:40rpx;}
 
