@@ -1,12 +1,3 @@
-<view class="header">
-  <view class="filter left">
-    <navigator url="../index/index" open-type="redirect">产品</navigator>
-  </view>
-  <view class="filter right">
-    <navigator url="../order/order" open-type="redirect">订单</navigator>
-  </view>
-</view>
-
 <!--订单列表-->
 <view class="orderlist">
   <view class="orderli">

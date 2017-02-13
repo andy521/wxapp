@@ -1,14 +1,4 @@
-<view class="container">
-  <view class="header">
-    <view class="filter left">
-      <navigator url="../good/good" open-type="redirect">商品</navigator>
-    </view>
-    <view class="filter right">
-      <navigator url="../order/order" open-type="redirect">订单</navigator>
-    </view>
-  </view>
-
-  <!--goodslist start-->
+ <!--goodslist start-->
   <view class="shop">
     <view class="goods" wx:for="{{goods}}" wx:for-item="i" wx:for-index="id" data-id="{{i.id-1}}" wx:key="id">
       <view class="goodsbox">
@@ -84,4 +74,3 @@
       </button>
     </form>
   </view>
-</view>

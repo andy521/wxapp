@@ -33,12 +33,6 @@
 				"text": "首页"
 			},
 			{
-				"selectedIconPath": "imgs/icon_05.png",
-				"iconPath": "imgs/icon_05.png",
-				"pagePath": "page/good/good",
-				"text": "商品"
-			},
-			{
 				"selectedIconPath": "imgs/icon_07.png",
 				"iconPath": "imgs/icon_07.png",
 				"pagePath": "page/order/order",

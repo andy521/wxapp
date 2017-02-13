@@ -1,8 +1,7 @@
-
-<!--订单头-->
+<!--上-->
 <view class="detailtop">
   <view class="detailtoppic">
-    <navigator url="../index/shop" >
+    <navigator url="../index/shop">
       <image src="/imgs/index/good.jpg"></image>
     </navigator>
   </view>
@@ -15,12 +14,60 @@
     2017年2月10日前店内商品满50立减10元
   </view>
 </view>
+
+<!--中-->
 <view class="indexbom-tit">商品分类</view>
 <view class="indexbom">
-  <image src="/imgs/index/fl_03.jpg"></image>
-  <image src="/imgs/index/fl_06.jpg"></image>
-  <image src="/imgs/index/fl_11.jpg"></image>
-  <image src="/imgs/index/fl_14.jpg"></image>
-  <image src="/imgs/index/fl_11.jpg"></image>
-  <image src="/imgs/index/fl_14.jpg"></image>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_03.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_06.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_11.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_14.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_11.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_14.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_11.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_14.jpg"></image>
+    </navigator>
+  </view>
+
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_11.jpg"></image>
+    </navigator>
+  </view>
+  <view class="indexbomli">
+    <navigator url="../good/good">
+      <image src="/imgs/index/fl_14.jpg"></image>
+    </navigator>
+  </view>
+  <view class="clear"></view>
 </view>
